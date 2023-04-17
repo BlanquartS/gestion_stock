@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: #232946;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  box-sizing: border-box;
+  color: #fffffe;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr th {
+  font-size: 18px;
+  padding: 12px;
+  border: 1px solid #232946;
+  text-align: left;
+  background-color: rgba(249, 245, 231, 0.2);
+}
+
+tr td {
+  border: 1px solid #232946;
+  text-align: left;
+}
+
+input {
+  font-size: 16px;
+  background-color: #f9f5e7;
+  border: none;
+  width: 96%;
+  padding: 12px 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.numericInput {
+  width: 100%;
+  border: none;
+
+}
+
+.numericRow{
+  width: 15%;
+}
+
+span{
+  width: 100%;
+}
+
+span > b{
+  background-color: white;
+}
+
+input:hover {
+  background-color: #f9f5e7;
+}
+
+input:focus {
+  outline: 1px solid #b8c1ec;
+  border: 1px solid #b8c1ec;
 }
