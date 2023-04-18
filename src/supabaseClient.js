@@ -8,7 +8,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
-    redirectTo: "https://gestion-stock-one.vercel.app/"
   });
   console.log(error);
   console.log(data);
