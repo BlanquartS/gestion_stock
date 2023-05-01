@@ -55,6 +55,18 @@ input {
   border: none;
 
 }
+button.locked .fa-lock {
+  color: red;
+}
+
+button.unlocked .fa-unlock {
+  color: green;
+}
+
+.mode{
+  width: 100%;
+  height: 40px;
+}
 
 .numericRow{
   width: 15%;

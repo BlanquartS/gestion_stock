@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLock, faUnlock } from '@fortawesome/free-solid-svg-icons'
 import NumericInput from 'react-numeric-input';
 
 const EditableTable = () => {
   const [fetchError, setFetchError] = useState();
   const [stock, setStock] = useState([]);
+  const [readMode, setMode] = useState(true);
 
   useEffect(() => {
     fecthData();
@@ -50,6 +53,9 @@ const EditableTable = () => {
     fetchError || (
       <div className="container">
         <h1 className="title">Stock</h1>
+        <button className={'mode'} onClick={()=>setMode(!readMode)}>
+          <FontAwesomeIcon icon={readMode ? faLock : faUnlock} />
+          </button>
         <table>
           <thead>
             <tr>
@@ -66,6 +72,7 @@ const EditableTable = () => {
                     className="numericInput"
                     name="nb_carton"
                     value={nb_carton}
+                    readOnly={readMode}
                     step={1}
                     min={0}
                     onChange={(e) => onChangeInput(e,"nb_carton", id)}
@@ -84,6 +91,7 @@ const EditableTable = () => {
                     className="numericInput"
                     name="nb_bouteille"
                     value={nb_bouteille}
+                    readOnly={readMode}
                     step={1}
                     min={0}
                     onChange={(e) => onChangeInput(e,"nb_bouteille", id)}
@@ -102,6 +110,7 @@ const EditableTable = () => {
                     name="type_champagne"
                     value={type_champagne}
                     type="text"
+                    readOnly="true"
                     step={1}
                     onChange={(e) => onChangeInput(e,"type_champagne", id)}
                   />
