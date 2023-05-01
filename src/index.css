@@ -12,8 +12,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 800px;
-  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -45,9 +43,14 @@ input {
   font-size: 16px;
   background-color: #f9f5e7;
   border: none;
-  width: 96%;
-  padding: 12px 12px;
+  padding: 12px 1%;
   font-family: "Poppins", sans-serif;
+}
+
+
+
+.type_champagne{
+  width: 98%;
 }
 
 .numericInput {

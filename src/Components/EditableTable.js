@@ -105,9 +105,10 @@ const EditableTable = () => {
                     }}
                   />
                 </td>
-                <td>
+                <td className={"type_champagne"}>
                   <input
                     name="type_champagne"
+                    className={"type_champagne"}
                     value={type_champagne}
                     type="text"
                     readOnly="true"
